@@ -666,7 +666,7 @@ class Ped(object):
     def sex_check(self, vcf_path, min_depth=7,
                   skip_missing=True,
                   plot=False,
-                  cutoff=0.6,
+                  cutoff=0.2,
                   n_sites=10000,
                   # these PARs work for GRCh37 and GRCh38
                   pars=('X:10000-2781479', 'X:154931044-156030895')):
