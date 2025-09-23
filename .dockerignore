@@ -1,0 +1,10 @@
+Dockerfile
+*.tar
+*.tar.gz
+__pycache__/
+*.pyc 
+*.pyo
+*.log
+*.tmp
+*.swp
+.git

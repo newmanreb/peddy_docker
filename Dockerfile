@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LD_LIBRARY_PATH=/usr/local/lib
 
-# Install build dependencies and bcftools, tabix directly
+# Install build dependencies and bcftools, tabix
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     build-essential \
@@ -31,10 +31,14 @@ RUN apt-get update && apt-get install -y ca-certificates && \
     ln -s /usr/local/bin/pip3.8 /usr/bin/pip && \
     cd .. && rm -rf Python-3.8.18*
 
-# Install peddy
-RUN pip install peddy
+# Copy your local peddy source into the container
+WORKDIR /app
+COPY . /app
 
-# Set working directory
+# Install peddy from your local source
+RUN pip install --no-cache-dir .
+
+# Set default working directory for data
 WORKDIR /data
 
 # Default command
