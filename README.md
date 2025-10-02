@@ -14,7 +14,7 @@ http://dx.doi.org/10.1016/j.ajhg.2017.01.017](http://www.cell.com/action/showFul
 ## Required inputs 
 - merged, multi-sample vcf with sample headers renamed to match filenames in format *.vcf.gz
 - tabix index of merged vcf in format *.vcf.gz.tbi 
-- tab-delimited .fam file describing sample metadata (family ID, individual ID, sex code) in format ped.<project>.fam 
+- tab-delimited .fam file describing sample metadata (family ID, individual ID, sex code) in format ped.*.fam 
 
 ## Expected outputs 
 #### Key outputs 
@@ -41,6 +41,6 @@ The docker image can be run as follows:
 docker run -v $PWD:/data <image_name> \
     peddy --plot -p 4 \
     --prefix /data/ped \
-    /data/<<project>_merged.vcf.gz> \
-    /data/<ped.<project>.fam>
+    /data/<<vcf_file_name>_merged.vcf.gz> \
+    /data/<ped.<fam_file_name>.fam>
 ```
