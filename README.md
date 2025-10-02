@@ -1,4 +1,4 @@
-# peddy_v1.6
+# seglh_peddy_docker v1.0
 
 peddy compares familial-relationships and sexes as reported in a [PED/FAM file](https://www.cog-genomics.org/plink2/formats#fam)
 with those inferred from a VCF.
@@ -6,6 +6,9 @@ with those inferred from a VCF.
 It samples the VCF at about 25000 sites (plus chrX) to accurately estimate **relatedness**, **IBS0**, **heterozygosity**, **sex** and **ancestry**. It uses 2504 thousand genome samples as backgrounds to calibrate the relatedness calculation and to make ancestry predictions.
 
 It does this very quickly by sampling, by using C for computationally intensive parts, and by parallelization.
+
+## Citation 
+This version of the peddy app is based on the developer's release of v.0.4.8. Original release: https://github.com/brentp/peddy/tree/v0.4.8
 
 Peddy Citation: [Pedersen and Quinlan, Who’s Who? Detecting and Resolving Sample Anomalies in Human DNA
 Sequencing Studies with Peddy, The American Journal of Human Genetics (2017),
